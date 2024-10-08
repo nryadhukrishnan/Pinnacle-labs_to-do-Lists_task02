@@ -1,0 +1,154 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #2b2b2b; /* Deep Slate Gray for text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 650px;
+    background-color: #ffffff; /* White for the container */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 90vh; /* Full height */
+    border: 2px solid #009688; /* Teal border */
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF; /* Bright Blue for header */
+}
+
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"], select {
+    width: calc(50% - 15px);
+    padding: 10px;
+    margin: 0 7px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #009688; /* Teal border */
+    background-color: #e0f2f1; /* Light teal for input */
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #007BFF; /* Bright Blue focus */
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background-color: #007BFF; /* Soft Blue for Add Task button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker Blue on hover */
+    transform: translateY(-2px);
+}
+
+.delete-all-button {
+    background-color: #FF5722; /* Vivid Orange for delete all button */
+    margin-left: 10px;
+}
+
+.delete-all-button:hover {
+    background-color: #E64A19; /* Darker Orange on hover */
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    overflow-y: auto; /* Enable vertical scrolling */
+    flex-grow: 1; /* Allow task list to grow and fill space */
+    max-height: 60vh; /* Maximum height for the task list */
+    background-color: #f1f8e9; /* Light green background for task list */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    padding: 15px;
+    background-color: #ffffff; /* White for tasks */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+input[type="checkbox"] {
+    margin-right: 15px;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: #FF5722; /* Vivid Orange for delete icon */
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.delete-button:hover {
+    color: #E64A19; /* Darker Orange on hover */
+    transform: rotate(90deg);
+}
+
+#categoryFilter {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #009688; /* Teal border for filter */
+    background-color: #e0f2f1; /* Light teal for filter */
+    transition: border-color 0.3s ease;
+}
+
+#categoryFilter:focus {
+    border-color: #007BFF; /* Bright Blue focus */
+    outline: none;
+}
